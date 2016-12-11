@@ -1,15 +1,15 @@
 var middlewareObj = {};
-var Campground = require("../models/campground");
+var Carshow = require("../models/carshow");
 var Comment = require("../models/comment");
 
-middlewareObj.checkCampgroundOwnership = function(req, res, next) {
+middlewareObj.checkCarshowOwnership = function(req, res, next) {
     if(req.isAuthenticated()){
-         Campground.findById(req.params.id, function(err, foundCampground){
+         Carshow.findById(req.params.id, function(err, foundCarshow){
          if (err) {
-             req.flash("error", "Campground not found.");
+             req.flash("error", "Carshow not found.");
             res.redirect("back");
         } else {
-            if(foundCampground.author.id.equals(req.user._id)) {
+            if(foundCarshow.author.id.equals(req.user._id)) {
                 next();    
             }else{
                 req.flash("error", "You don't have permission to do that.");

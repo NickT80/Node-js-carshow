@@ -10,8 +10,8 @@ var express = require("express"),
     methodOverride = require("method-override")
     
 //requring routes
-var commentRoutes = require("./routes/comments"),
-    campgroundtRoutes = require("./routes/campgrounds"),
+var commentRoutes = require("./routes/commentrts"),
+    CarshowtRoutes = require("./routes/carshowrts"),
     indexRoutes = require("./routes/index");
     
 mongoose.connect(process.env.DATABASEURL);
@@ -50,9 +50,9 @@ app.use(function(req, res, next){
 });
 
 app.use("/",indexRoutes);
-app.use("/campgrounds",campgroundtRoutes);
-app.use("/campgrounds/:id/comments",commentRoutes);
+app.use("/Carshows",CarshowtRoutes);
+app.use("/Carshows/:id/comments",commentRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("The YelpCamp Server Has Started!");
+    console.log("The CarShow Server Has Started!");
 });
