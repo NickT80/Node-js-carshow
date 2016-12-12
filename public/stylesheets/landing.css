@@ -13,6 +13,14 @@ body {
   color: #fff;
 }
 
+#carshow {
+  color: black;
+}
+
+#delete-form {
+    display: inline;
+}
+
 .slideshow { 
   position: fixed;
   width: 100%;

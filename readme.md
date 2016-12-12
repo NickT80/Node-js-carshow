@@ -1,8 +1,8 @@
-#YelpCamp
+#CarShow
 
 ##Initial Setup
 * Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+* Add CarShows Page that lists all CarShows
 
 Each Campground has:
    * Name
@@ -12,15 +12,15 @@ Each Campground has:
 * Create our header and footer partials
 * Add in Bootstrap
 
-#Creating New Campgrounds
+#Creating New CarShows
 * Setup new campground POST route
 * Add in body-parser
 * Setup route to show form
 * Add basic unstyled form
 
-#Style the campgrounds page
+#Style the CarShows page
 * Add a better header/title
-* Make campgrounds display in a grid
+* Make CarShows display in a grid
 
 #Style the Navbar and Form
 * Add a navbar to all templates
@@ -64,15 +64,15 @@ RESTFUL ROUTES
 
 name      url      verb    desc.
 ===============================================
-INDEX   /dogs      GET   Display a list of all dogs
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
+INDEX   /carshow      GET   Display a list of all carshow
+NEW     /carshow/new  GET   Displays form to make a new dog
+CREATE  /carshow      POST  Add new dog to DB
+SHOW    /carshow/:id  GET   Shows info about one dog
 
-INDEX   /campgrounds
-NEW     /campgrounds/new
-CREATE  /campgrounds
-SHOW    /campgrounds/:id
+INDEX   /CarShows
+NEW     /CarShows/new
+CREATE  /CarShows
+SHOW    /CarShows/:id
 
-NEW     campgrounds/:id/comments/new    GET
-CREATE  campgrounds/:id/comments      POST
+NEW     CarShows/:id/comments/new    GET
+CREATE  CarShows/:id/comments      POST

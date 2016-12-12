@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+//Schema creation for DB
 
 var carshowSchema = new mongoose.Schema({
    name: String,
