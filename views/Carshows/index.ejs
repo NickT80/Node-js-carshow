@@ -1,16 +1,16 @@
 <% include ../partials/header %> 
-
+        
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+        <link rel="stylesheet" href="/stylesheets/landing.css">
 <div class="container">
-    <div class="bg"></div>
     <header class="jumbotron">
         <div class="container">
-            <h1 >Welcome To Car Shows Page!</h1>
+            <h1>Welcome To Car Shows Page!</h1>
             <p>View high end cars from all over the world</p>
         </div>
         <div class="col-md-4 text-center"> 
             <a class="btn btn-primary btn-large center-block" href="/Carshows/new">Add New Carshow</a>
         </div>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
     </header>
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <% Carshows.forEach(function(Carshow){ %>
@@ -28,5 +28,4 @@
         <% }); %>
     </div>
 </div>
-
 <% include ../partials/footer %>
